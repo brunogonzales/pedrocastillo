@@ -1,6 +1,18 @@
 <script>
+  import {
+    Telegram,
+    WhatsApp,
+    Facebook,
+    Twitter,
+  } from "svelte-share-buttons-component"
+
+  const url = "https://pedrocastillo.netlify.app/"
+  const title = "Compromiso de Pedro Castillo con el pueblo peruano"
+  const desc =
+    "Hemos tenido en el pasado a políticos que llegaron al poder con la promesa de cambios, y que al final terminaron traicionando la confianza de los peruanos. Me comprometo a que no daré descanso a mi brazo ni reposo a mi alma hasta haber honrado mis promesas de transformación social."
 </script>
 
+<img src="images/pedrocastillo.png" />
 <main>
   <h1>Compromiso con el pueblo peruano</h1>
   <span>Pedro Castillo, 5 de Mayo del 2021</span>
@@ -104,22 +116,61 @@
       </p>
     </li>
   </ol>
-  <p>Palabra de maestro</p>
+  <p>Palabra de maestro.</p>
 
-  <p>Pedro Castillo Terrones</p>
-  <p>Candidato a Presidencia Constitucional de la República</p>
+  <div class="signature">
+    <p><b>Pedro Castillo Terrones</b></p>
+    <span>Candidato a Presidencia Constitucional de la República</span>
+  </div>
+  <div class="share">
+    <Telegram class="share-button" text={title} {url} />
+    <Twitter
+      class="share-button"
+      text={title}
+      {url}
+      hashtags="pedrocastillo,perulibre,juntosporelperu"
+      via="username"
+      related="other,users"
+    />
+    <WhatsApp class="share-button" text="{title} {url}" />
+    <Facebook class="share-button" {url} />
+  </div>
 </main>
 
 <style>
-  main {
-    padding: 1em;
-    max-width: 240px;
+  img {
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
+    display: block;
+  }
+  main {
+    max-width: 325px;
+    margin: 0 auto;
+    padding-bottom: 60px;
   }
 
   @media (min-width: 640px) {
+    img {
+      max-width: 720px;
+    }
     main {
+      padding: 1em;
       max-width: 600px;
     }
+  }
+
+  .share {
+    padding-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .signature p {
+    margin-bottom: 0;
+  }
+
+  .signature span {
+    color: rgb(135, 135, 135);
   }
 </style>
