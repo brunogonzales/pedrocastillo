@@ -12,10 +12,19 @@
     "Hemos tenido en el pasado a políticos que llegaron al poder con la promesa de cambios, y que al final terminaron traicionando la confianza de los peruanos. Me comprometo a que no daré descanso a mi brazo ni reposo a mi alma hasta haber honrado mis promesas de transformación social."
 </script>
 
-<img src="images/pedrocastillo.png" />
+<img
+  class="cover"
+  src="images/pedrocastillo.png"
+  alt="Foto de Pedro Castillo"
+/>
+
 <main>
   <h1>Compromiso con el pueblo peruano</h1>
-  <span>Pedro Castillo, 5 de Mayo del 2021</span>
+  <p>
+    <a target="_blank" href="https://twitter.com/PedroCastilloTe">
+      Pedro Castillo Terrones</a
+    >, 5 de Mayo del 2021
+  </p>
   <ol>
     <li>
       <p>
@@ -123,6 +132,8 @@
     <span>Candidato a Presidencia Constitucional de la República</span>
   </div>
   <div class="share">
+    <span>Compartir</span>
+    <button>PDF</button>
     <Telegram class="share-button" text={title} {url} />
     <Twitter
       class="share-button"
@@ -138,12 +149,13 @@
 </main>
 
 <style>
-  img {
+  .cover {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
     display: block;
   }
+
   main {
     max-width: 325px;
     margin: 0 auto;
@@ -151,7 +163,7 @@
   }
 
   @media (min-width: 640px) {
-    img {
+    .cover {
       max-width: 720px;
     }
     main {
@@ -160,10 +172,27 @@
     }
   }
 
+  .share span {
+    margin-right: 12px;
+    background-image: linear-gradient(
+      to left,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
   .share {
     padding-top: 12px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
   .signature p {
