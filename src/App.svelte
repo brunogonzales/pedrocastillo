@@ -23,7 +23,7 @@
   <p>
     <a target="_blank" href="https://twitter.com/PedroCastilloTe">
       Pedro Castillo Terrones</a
-    >, 5 de Mayo del 2021
+    > <span class="date">5 de Mayo del 2021</span>
   </p>
   <ol>
     <li>
@@ -153,6 +153,10 @@
     height: auto;
     margin: 0 auto;
     display: block;
+  }
+
+  .date {
+    color: rgb(135, 135, 135);
   }
 
   main {
