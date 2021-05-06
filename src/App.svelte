@@ -128,12 +128,11 @@
   <p>Palabra de maestro.</p>
 
   <div class="signature">
-    <p><b>Pedro Castillo Terrones</b></p>
+    <p><b>🇵🇪 Pedro Castillo Terrones</b></p>
     <span>Candidato a Presidencia Constitucional de la República</span>
   </div>
   <div class="share">
-    <span>Compartir</span>
-    <button>PDF</button>
+    <span><b>Compartir ❤️</b></span>
     <Telegram class="share-button" text={title} {url} />
     <Twitter
       class="share-button"
@@ -176,13 +175,13 @@
     margin-right: 12px;
     background-image: linear-gradient(
       to left,
-      violet,
-      indigo,
-      blue,
-      green,
-      yellow,
-      orange,
-      red
+      rgb(238, 165, 238),
+      rgb(170, 110, 212),
+      rgb(102, 102, 238),
+      rgb(70, 211, 70),
+      rgb(191, 237, 118),
+      rgb(255, 199, 95),
+      rgb(255, 118, 118)
     );
     -webkit-background-clip: text;
     color: transparent;
