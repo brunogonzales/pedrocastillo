@@ -138,8 +138,8 @@
       class="share-button"
       text={title}
       {url}
-      hashtags="pedrocastillo,perulibre,juntosporelperu"
-      via="username"
+      hashtags="pedrocastillo,perulibre"
+      via="@holachepi"
       related="other,users"
     />
     <WhatsApp class="share-button" text="{title} {url}" />
